@@ -1,0 +1,239 @@
+:root {
+  --ocean-900: #042238;
+  --ocean-800: #093a5b;
+  --ocean-700: #0f547e;
+  --aqua-500: #27b8d6;
+  --sand-100: #f4f0e8;
+  --sand-200: #e8dfd0;
+  --ink-900: #1f2d38;
+  --white: #ffffff;
+  --shadow: 0 18px 45px rgba(4, 34, 56, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  color: var(--ink-900);
+  background:
+    radial-gradient(circle at 12% 10%, rgba(39, 184, 214, 0.25), transparent 28%),
+    radial-gradient(circle at 80% 15%, rgba(15, 84, 126, 0.2), transparent 35%),
+    linear-gradient(155deg, #f8f5ef 0%, #e5eef2 55%, #d7e6ec 100%);
+  min-height: 100vh;
+}
+
+.page-wrap {
+  width: min(1180px, 92vw);
+  margin: 0 auto;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  background: rgba(4, 34, 56, 0.82);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  color: var(--white);
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 1.15rem;
+}
+
+.brand-mark {
+  width: 1.8rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(150deg, var(--aqua-500), #79dde8);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.7);
+}
+
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 0;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: flex-end;
+}
+
+.main-nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.93rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: 180ms ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.hero {
+  margin-top: 1.2rem;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  color: var(--white);
+  background:
+    linear-gradient(132deg, rgba(4, 34, 56, 0.9), rgba(15, 84, 126, 0.82)),
+    linear-gradient(20deg, rgba(244, 240, 232, 0.15), rgba(39, 184, 214, 0.2));
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -8% -70% auto;
+  width: 65%;
+  height: 160%;
+  transform: rotate(10deg);
+  background: radial-gradient(circle, rgba(39, 184, 214, 0.18), transparent 65%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: clamp(2rem, 4vw, 4rem);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", Georgia, serif;
+  margin-top: 0;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(2rem, 4.8vw, 3.7rem);
+  margin-bottom: 0.8rem;
+}
+
+.hero p {
+  max-width: 68ch;
+  line-height: 1.6;
+  margin: 0;
+  font-size: clamp(1rem, 1.7vw, 1.15rem);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 1.2rem;
+  margin: 1.2rem 0 2.2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(4, 34, 56, 0.13);
+  border-radius: 18px;
+  padding: clamp(1rem, 2.5vw, 1.6rem);
+  box-shadow: 0 8px 25px rgba(4, 34, 56, 0.08);
+  animation: rise 540ms ease both;
+}
+
+.card h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 0.7rem;
+}
+
+.card p,
+.card li {
+  line-height: 1.6;
+}
+
+.card a {
+  color: #0a4f88;
+}
+
+.stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.album {
+  border-radius: 14px;
+  border: 1px solid rgba(9, 58, 91, 0.2);
+  background: linear-gradient(180deg, #f8fbfd 0%, #eef6f8 100%);
+  padding: 1rem;
+}
+
+.album h3 {
+  margin-bottom: 0.4rem;
+}
+
+.callout {
+  background: linear-gradient(135deg, var(--sand-100), var(--sand-200));
+  border-left: 5px solid #0f547e;
+}
+
+.footer {
+  margin: 1rem 0 2rem;
+  border-radius: 18px;
+  background: #082943;
+  color: #d8e9ef;
+  padding: 1.2rem;
+}
+
+.footer p,
+.footer li {
+  margin: 0.25rem 0;
+  line-height: 1.5;
+}
+
+.footer a {
+  color: #b2e5f1;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav {
+    justify-content: flex-start;
+  }
+
+  .nav-row {
+    display: block;
+    padding-bottom: 1rem;
+  }
+
+  .brand {
+    margin-bottom: 0.65rem;
+  }
+}
