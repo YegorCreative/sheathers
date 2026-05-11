@@ -189,6 +189,32 @@ h1 {
   border-left: 5px solid #0f547e;
 }
 
+.video-preview {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.video-preview > div {
+  border: 1px solid rgba(4, 34, 56, 0.12);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.video-preview p {
+  margin: 0.85rem 1rem 0.75rem;
+  font-size: 0.95rem;
+}
+
+.video-preview iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  display: block;
+  min-height: 220px;
+}
+
 .footer {
   margin: 1rem 0 2rem;
   border-radius: 18px;
